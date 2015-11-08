@@ -11,12 +11,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='User',
+            name='Blog',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('name', models.CharField(max_length=30)),
-                ('password', models.CharField(max_length=30)),
-                ('email', models.EmailField(max_length=75)),
+                ('text', models.TextField()),
+                ('author', models.CharField(max_length=30)),
             ],
             options={
             },
