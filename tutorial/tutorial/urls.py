@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 import views
-from twitter import views as model_views
+from blog import views as model_views
 
 admin.autodiscover()
 
@@ -12,6 +12,6 @@ urlpatterns = patterns('',
 
     url(r'^$',views.home),
     url(r'^hello/',views.hello),
-    url(r'^user/',model_views.makeuser),
+    url(r'^blog-form/',model_views.blogform),
     url(r'^admin/', include(admin.site.urls)),
 )

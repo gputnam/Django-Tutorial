@@ -6,10 +6,9 @@ def hello(request):
     return HttpResponse("Hello World")
 
 def home(request):
-    date = datetime.datetime.now()
     name = "Gray Putnam"    
 
-    return render(request, 'home.html', {'name':name,'today':date})
+    return render(request, 'home.html', {'name':name})
 
 
 
